@@ -60,6 +60,10 @@
                     </view>
                     <navigationItem key="navigationItem" title="First View Controller" id="QVd-Dt-wRH"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <connections>
+                        <outlet property="keyBoardView" destination="DFK-gq-cte" id="OjR-pw-5bX"/>
+                        <outlet property="numberLbl" destination="AIS-sX-w1d" id="7qn-p7-ckZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

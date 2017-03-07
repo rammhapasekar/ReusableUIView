@@ -9,6 +9,8 @@
 import UIKit
 
 class Keyboard: UIView {
+    
+    var delegate: KeyBoardDelegate?
 
     @IBOutlet var view: UIView!
 
@@ -18,4 +20,16 @@ class Keyboard: UIView {
         
         self.addSubview(self.view)
     }
+    
+    @IBAction func btnTapped(sender: AnyObject) {
+    
+        let btnTag = sender.tag
+        self.delegate?.keyboardBtnTapped(btnTag)
+    }
+    
+}
+
+protocol KeyBoardDelegate: class{
+    
+    func keyboardBtnTapped(btnNumber: NSInteger)
 }

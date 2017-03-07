@@ -49,6 +49,9 @@
                     <rect key="frame" x="202" y="109" width="70" height="70"/>
                     <fontDescription key="fontDescription" type="boldSystem" pointSize="28"/>
                     <state key="normal" title="6"/>
+                    <connections>
+                        <action selector="btnTapped:" destination="-1" eventType="touchUpInside" id="zc5-zC-ov4"/>
+                    </connections>
                 </button>
                 <button opaque="NO" tag="8" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Eif-F4-EER" customClass="CircleButton" customModule="ReusableUIView" customModuleProvider="target">
                     <rect key="frame" x="105" y="197" width="70" height="70"/>

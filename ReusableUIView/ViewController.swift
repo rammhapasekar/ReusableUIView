@@ -8,18 +8,27 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, KeyBoardDelegate {
 
+    
+    @IBOutlet weak var keyBoardView: Keyboard!
+    
+    @IBOutlet weak var numberLbl: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        self.keyBoardView.delegate = self
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-
+    
+    func keyboardBtnTapped(btnNumber: NSInteger) {
+        self.numberLbl.text = NSString(format: "%d", btnNumber) as String
+    }
 }
+
 
