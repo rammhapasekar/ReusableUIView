@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--First View Controller-->
@@ -17,15 +18,45 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GQP-Ed-fdl">
-                                <rect key="frame" x="152" y="600" width="111" height="80"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DFK-gq-cte" customClass="Keyboard" customModule="ReusableUIView" customModuleProvider="target">
+                                <rect key="frame" x="57" y="156" width="300" height="300"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="11h-cx-5zD"/>
+                                    <constraint firstAttribute="height" constant="300" id="fe9-X0-7fr"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AIS-sX-w1d">
+                                <rect key="frame" x="57" y="113" width="300" height="25"/>
+                                <fontDescription key="fontDescription" name="ArialUnicodeMS" family="Arial Unicode MS" pointSize="21"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GQP-Ed-fdl" customClass="CircleButton" customModule="ReusableUIView" customModuleProvider="target">
+                                <rect key="frame" x="147" y="476" width="120" height="120"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="3il-vz-1Ph"/>
+                                    <constraint firstAttribute="height" constant="120" id="UYD-fQ-3oO"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                                 <state key="normal" title="Next Page"/>
                                 <connections>
                                     <segue destination="CNU-53-MUZ" kind="show" identifier="mySegue" id="lt4-W8-N0d"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="0.38244810159999998" blue="0.091849888170000005" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.40000000600000002" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="DFK-gq-cte" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="37" id="EMF-Nh-rhE"/>
+                            <constraint firstItem="AIS-sX-w1d" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="F3z-EH-YK1"/>
+                            <constraint firstItem="GQP-Ed-fdl" firstAttribute="top" secondItem="DFK-gq-cte" secondAttribute="bottom" constant="20" id="Wmb-XU-vf1"/>
+                            <constraint firstItem="DFK-gq-cte" firstAttribute="top" secondItem="AIS-sX-w1d" secondAttribute="bottom" constant="18" id="YuY-n8-Eaw"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="DFK-gq-cte" secondAttribute="trailing" constant="37" id="aoY-yK-sTo"/>
+                            <constraint firstItem="AIS-sX-w1d" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="49" id="avE-O6-BcC"/>
+                            <constraint firstItem="AIS-sX-w1d" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="37" id="cSh-at-7du"/>
+                            <constraint firstItem="GQP-Ed-fdl" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="p52-W8-k6T"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="AIS-sX-w1d" secondAttribute="trailing" constant="37" id="sAB-3n-tIk"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="First View Controller" id="QVd-Dt-wRH"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
@@ -45,7 +76,23 @@
                     <view key="view" contentMode="scaleToFill" id="kGd-c6-Xd1">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.20000000000000001" green="0.80000000000000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QhW-Gb-5TH" customClass="Keyboard" customModule="ReusableUIView" customModuleProvider="target">
+                                <rect key="frame" x="57" y="84" width="300" height="300"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="Ubj-5x-1Au"/>
+                                    <constraint firstAttribute="height" constant="300" id="Vbz-SL-Loc"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.40000000600000002" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="QhW-Gb-5TH" firstAttribute="centerX" secondItem="kGd-c6-Xd1" secondAttribute="centerX" id="KKT-PW-YVO"/>
+                            <constraint firstItem="QhW-Gb-5TH" firstAttribute="leading" secondItem="kGd-c6-Xd1" secondAttribute="leadingMargin" constant="37" id="X58-hw-572"/>
+                            <constraint firstItem="QhW-Gb-5TH" firstAttribute="top" secondItem="whb-lJ-Hli" secondAttribute="bottom" constant="20" id="dzg-3a-PXr"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="QhW-Gb-5TH" secondAttribute="trailing" constant="37" id="orH-SZ-uq8"/>
+                        </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                 </viewController>

@@ -10,12 +10,12 @@ import UIKit
 
 class Keyboard: UIView {
 
-    /*
-    // Only override drawRect: if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func drawRect(rect: CGRect) {
-        // Drawing code
-    }
-    */
+    @IBOutlet var view: UIView!
 
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+    NSBundle.mainBundle().loadNibNamed("Keyboard", owner: self, options: nil)
+        
+        self.addSubview(self.view)
+    }
 }
